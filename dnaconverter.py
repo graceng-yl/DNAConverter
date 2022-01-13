@@ -20,10 +20,6 @@ for record in SeqIO.parse(inputname, "fasta"):
         outseq = seq.complement()
     elif choice == '3':
         outseq = seq.reverse_complement()
-    elif choice == 'q':
-        break
-    else:
-        print('Invalid action')
     rec.append(SeqRecord(outseq, id=record.id, description="", name=""))
 
 outname = inputname.rpartition('.')[0]
